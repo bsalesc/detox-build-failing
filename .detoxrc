@@ -1,0 +1,18 @@
+{
+  "behavior": {
+    "init": {
+        "launchApp": true
+    }
+  },
+  "testRunner": "jest",
+  "configurations": {
+    "android": {
+      "type": "android.emulator",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android && ./gradlew clean cleanBuildCache && BUILD_ENVIRONMENT=testing ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug --no-build-cache && cd ..",
+      "device": {
+        "avdName": "Pixel_2_API_28"
+      }
+    }
+  }
+}
